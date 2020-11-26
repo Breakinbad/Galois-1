@@ -17,6 +17,7 @@ target_include_directories(lonestar PUBLIC
 target_link_libraries(lonestar galois_shmem gllvm)
 
 add_subdirectory(barneshut)
+add_subdirectory(partitioning)
 add_subdirectory(betweennesscentrality) 
 add_subdirectory(bfs)
 add_subdirectory(boruvka)
