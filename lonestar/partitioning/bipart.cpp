@@ -307,22 +307,6 @@ int main(int argc, char** argv) {
   }
 
 
-  std::ifstream in("finalembbeding.txt");
-  
-  std::string line1;
-  while(std::getline(in, line1)) {
-    std::stringstream ss(line1);
-    unsigned node;
-    ss >> node;
-    double val;
-    unsigned iter = 0;
-    while(ss >> val) {
-      graph.getData(node).EMvec[iter] = val;
-      iter++;
-    }
-
-  }
-
   Partition(&metisGraph, csize, 2);
   //std::cout<<"Total Edge Cut: "<<computingCut(graph)<<"\n";
   galois::runtime::reportStat_Single("HyPar", "Edge Cut", computingCut(graph));
