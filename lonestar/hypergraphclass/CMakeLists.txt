@@ -1,0 +1,2 @@
+app(boruvka bipart.cpp)
+
